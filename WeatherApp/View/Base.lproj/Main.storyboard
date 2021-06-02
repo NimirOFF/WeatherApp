@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FirstOneStripe.ttf">
+            <string>AstakhovFirstOneStripe</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weather background" translatesAutoresizingMaskIntoConstraints="NO" id="NQm-F3-Cl4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kXU-vC-8Qt">
+                                <rect key="frame" x="20" y="64" width="188.5" height="340"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ajU-2M-qpB">
+                                        <rect key="frame" x="0.0" y="0.0" width="176.5" height="65"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатеринбург" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZV-Ed-Frp">
+                                                <rect key="frame" x="0.0" y="0.0" width="176.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AstakhovFirstOneStripe" family="Astakhov First One Stripe" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Россия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccw-45-nd7">
+                                                <rect key="frame" x="0.0" y="37.5" width="93" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AstakhovFirstOneStripe" family="Astakhov First One Stripe" pointSize="30"/>
+                                                <color key="textColor" red="1" green="0.97950861580000004" blue="0.98804141550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mqL-Ka-tcc">
+                                        <rect key="frame" x="0.0" y="85" width="188.5" height="18.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 июня" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETT-mx-Kh8">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="AstakhovFirstOneStripe" family="Astakhov First One Stripe" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.97950861580000004" blue="0.98804141550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Понедельник" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKX-9v-E83">
+                                                <rect key="frame" x="73" y="0.0" width="115.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="AstakhovFirstOneStripe" family="Astakhov First One Stripe" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.97950861580000004" blue="0.98804141550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NVv-Pe-wdu">
+                                        <rect key="frame" x="0.0" y="123.5" width="148" height="216.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dow-mT-0QS">
+                                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="58.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnT-NU-ieg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="58.5"/>
+                                                        <fontDescription key="fontDescription" name="AstakhovFirstOneStripe" family="Astakhov First One Stripe" pointSize="50"/>
+                                                        <color key="textColor" red="1" green="0.97950861580000004" blue="0.98804141550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVe-H4-PSJ">
+                                                        <rect key="frame" x="57.5" y="0.0" width="48" height="58.5"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="50"/>
+                                                        <color key="textColor" red="1" green="0.97950861580000004" blue="0.98804141550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UU7-7i-jKt">
+                                                <rect key="frame" x="0.0" y="68.5" width="148" height="148"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="148" id="MzF-BU-IlI"/>
+                                                    <constraint firstAttribute="height" constant="148" id="PLS-AQ-WCt"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayE-kO-WLY">
+                                <rect key="frame" x="360" y="842" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ayE-kO-WLY" secondAttribute="height" multiplier="1:1" id="h8o-OE-rNa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="1" green="0.97950861580000004" blue="0.98804141550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wwf-IX-hr2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NQm-F3-Cl4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2mX-vW-Kch"/>
+                            <constraint firstAttribute="bottom" secondItem="ayE-kO-WLY" secondAttribute="bottom" constant="30" id="73F-X1-d7d"/>
+                            <constraint firstItem="NQm-F3-Cl4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B7Y-t1-gjG"/>
+                            <constraint firstItem="kXU-vC-8Qt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NPI-Ae-m5O"/>
+                            <constraint firstAttribute="bottom" secondItem="NQm-F3-Cl4" secondAttribute="bottom" id="SaT-KV-H0N"/>
+                            <constraint firstItem="kXU-vC-8Qt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WVG-Ud-QsU"/>
+                            <constraint firstItem="NQm-F3-Cl4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bML-fy-fq0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ayE-kO-WLY" secondAttribute="trailing" constant="30" id="p3B-qE-zTV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="NQm-F3-Cl4" id="Cmb-Wj-Cds"/>
+                        <outlet property="cityLabel" destination="mZV-Ed-Frp" id="FYA-J5-pmA"/>
+                        <outlet property="countryLabel" destination="Ccw-45-nd7" id="VVA-9b-IkP"/>
+                        <outlet property="currentDate" destination="ETT-mx-Kh8" id="N4h-T4-vBl"/>
+                        <outlet property="currentDay" destination="EKX-9v-E83" id="yeD-wq-vV9"/>
+                        <outlet property="temperatyreLabel" destination="MnT-NU-ieg" id="vq5-fM-nt8"/>
+                        <outlet property="weatherIcon" destination="UU7-7i-jKt" id="CfA-DH-lEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Weather background" width="1968" height="4257"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
