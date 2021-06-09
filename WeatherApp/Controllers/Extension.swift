@@ -9,12 +9,20 @@ import UIKit
 
 extension ViewController {
     
+
+    
+//    enum errorList: String {
+//        case error404 = "Город не найден"
+//        case error429 = "Превышен лимит запросов"
+//    }
+    
     func searchAlertController(withTitle title: String?, message: String?, style: UIAlertController.Style, completionHandler: @escaping (String) -> Void) {
         
         let ac = UIAlertController(title: title, message: message, preferredStyle: style)
         ac.addTextField { (textField) in
             textField.placeholder = "Например Moscow"
         }
+        
         let search = UIAlertAction(title: "Поиск", style: .default) { (action) in
             let textField = ac.textFields?.first
             guard let cityName = textField?.text else { return }
@@ -22,9 +30,10 @@ extension ViewController {
                 let city = cityName.split(separator: " ").joined(separator: "%20")
                 completionHandler(city)
             } else {
-                self.showError()
+                self.showEmptyString()
             }
         }
+        
         let cancel = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
         ac.addAction(search)
         ac.addAction(cancel)
@@ -32,13 +41,19 @@ extension ViewController {
     }
     
     
-    func showError() {
+    func showEmptyString() {
         
         let alert = UIAlertController.init(title: "Город не введен", message: "Введите название города", preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: "Ok", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
+//    func showErrorAlert(error: errorList) {
+//        
+//        let alert = UIAlertController.init(title: "Ошибка", message: error.rawValue, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction.init(title: "Ok", style: .cancel, handler: nil))
+//        show(alert, sender: nil)
+//    }
     
     func getCurrentDate() -> String {
         

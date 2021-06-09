@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkManager.onCompletion = { currentWeather in
+        networkManager.weatherCompletion = { currentWeather in
             self.updateInterface(weather: currentWeather)
         }
         networkManager.fetchWeather(City: "Yekaterinburg")

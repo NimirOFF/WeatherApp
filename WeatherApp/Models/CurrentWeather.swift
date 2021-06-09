@@ -46,6 +46,16 @@ struct CurrentWeather {
         }
     }
     
+//    let httpError: Int
+//    var error: String {
+//
+//        switch httpError {
+//        case 404: return "404"
+//        case 429: return "429"
+//        default: return "good"
+//        }
+//    }
+    
     
     init?(currentData: CurrentData) {
         
@@ -53,5 +63,6 @@ struct CurrentWeather {
         countryName = currentData.sys.country
         temperature = currentData.main.temp
         conditionCode = currentData.weather.first!.id
+      //  httpError = currentData.cod
     }
 }

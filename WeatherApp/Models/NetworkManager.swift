@@ -9,7 +9,7 @@ import Foundation
 
 struct NetworkManager {
     
-    var onCompletion: ((CurrentWeather) -> Void)?
+    var weatherCompletion: ((CurrentWeather) -> Void)?
     
     func fetchWeather(City city: String) {
         
@@ -19,7 +19,7 @@ struct NetworkManager {
         session.dataTask(with: url) { (data, response, error) in
         if let data = data {
             if let currentWeather = self.parseJSON(withData: data) {
-                self.onCompletion?(currentWeather)
+                self.weatherCompletion?(currentWeather)
             }
         }
     }.resume()
