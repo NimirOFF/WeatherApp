@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     @IBAction func searchPressed(_ sender: UIButton!) {
         
         self.searchAlertController(withTitle: "Введите город", message: nil, style: .alert) { city in
-            self.networkManager.fetchWeather(City: city)
+            self.networkManager.requestNetworkWeather(City: city)
         }
 }
 
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         networkManager.weatherCompletion = { currentWeather in
             self.updateInterface(weather: currentWeather)
         }
-        networkManager.fetchWeather(City: "Yekaterinburg")
+        networkManager.requestNetworkWeather(City: "Yekaterinburg")
     }
     
     func updateInterface(weather: CurrentWeather) {
