@@ -13,7 +13,6 @@ struct CurrentData: Codable {
     let main: Main
     let weather: [Weather]
     let sys: Sys
-  //  let cod: Int
 }
 
 struct Main: Codable {

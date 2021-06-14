@@ -28,7 +28,6 @@ struct CurrentWeather {
         case 800: return "039-sun"
         case 801...804: return "001-cloud"
         default: return "nosign"
-            
         }
     }
     
@@ -45,24 +44,12 @@ struct CurrentWeather {
         default: return "Weather background"
         }
     }
-    
-//    let httpError: Int
-//    var error: String {
-//
-//        switch httpError {
-//        case 404: return "404"
-//        case 429: return "429"
-//        default: return "good"
-//        }
-//    }
-    
-    
+
     init?(currentData: CurrentData) {
         
         cityName = currentData.name
         countryName = currentData.sys.country
         temperature = currentData.main.temp
         conditionCode = currentData.weather.first!.id
-      //  httpError = currentData.cod
     }
 }

@@ -9,13 +9,6 @@ import UIKit
 
 extension ViewController {
     
-
-    
-//    enum errorList: String {
-//        case error404 = "Город не найден"
-//        case error429 = "Превышен лимит запросов"
-//    }
-    
     func searchAlertController(withTitle title: String?, message: String?, style: UIAlertController.Style, completionHandler: @escaping (String) -> Void) {
         
         let ac = UIAlertController(title: title, message: message, preferredStyle: style)
@@ -47,13 +40,7 @@ extension ViewController {
         alert.addAction(UIAlertAction.init(title: "Ok", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
-//    func showErrorAlert(error: errorList) {
-//        
-//        let alert = UIAlertController.init(title: "Ошибка", message: error.rawValue, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction.init(title: "Ok", style: .cancel, handler: nil))
-//        show(alert, sender: nil)
-//    }
+
     
     func getCurrentDate() -> String {
         

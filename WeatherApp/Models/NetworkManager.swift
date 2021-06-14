@@ -10,7 +10,7 @@ import Foundation
 class NetworkManager {
     
     var weatherCompletion: ((CurrentWeather) -> Void)?
-    var networkWeatherFetch = NetworkWeatherFetch()
+    var networkWeatherFetch: NetworkWeatherFetch!
     
     init(networkWeatherFetch: NetworkWeatherFetch = NetworkWeatherFetch()) {
         self.networkWeatherFetch = networkWeatherFetch
@@ -20,7 +20,7 @@ class NetworkManager {
         
         let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric&lang=ru"
         guard let url = URL(string: urlString) else { return }
-        let session = URLSession(configuration: .default)
+        let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
         if let data = data {
             if let currentWeather = self.networkWeatherFetch.networkWeatherFetch(withData: data) {
